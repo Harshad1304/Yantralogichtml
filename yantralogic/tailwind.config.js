@@ -8,7 +8,8 @@ export default {
     extend: {
       colors : {
         'card-bg':'#343434',
-        'card-bg-hover':'#262626'
+        'card-bg-hover':'#262626',
+        'newblue': '#06f',
       }
     },
   },

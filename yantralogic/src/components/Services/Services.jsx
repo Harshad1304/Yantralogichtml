@@ -9,10 +9,17 @@ function Services() {
 
             {/* Headings goes here */}
         <div className=''>
-            <h1 className=' text-5xl font-light text-white'>We Create New Solutions and Transform <br />
+          <div>
+            <h1 className=' hidden md:block lg:text-5xl text-3xl font-light text-white'>We Create New Solutions and Transform <br />
                 Existing Ones with a Development Process That <br /> 
                 Beats Industry-Best Timelines
             </h1>
+            <h1 className=' md:hidden lg:text-5xl text-3xl font-light text-white'>
+            We Create New Solutions and Transform
+              Existing Ones with a Development Process That
+              Beats Industry-Best Timelines
+            </h1>
+          </div>
 
             {/* Button goes here */}
             <div className='mt-20'> 
@@ -20,9 +27,9 @@ function Services() {
                 Our Services
                 </a>
             </div>
-            
+
            {/* Our Cards Goes Here */}
-           <div className="mt-10 grid md:gap-4 md:grid-cols-4">
+           <div className="mt-20 grid gap-4 md:gap-4 grid-cols-4">
            {contents.map((elem,i)=>(
             <Card src={elem.imgSrc} key={i} title={elem.heading} />
            ))}
