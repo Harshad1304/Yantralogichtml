@@ -14,7 +14,7 @@ function App() {
      <Hero />
      <Services />
      <Numbers />
-     {/* <Solutions /> */}
+     <Solutions />
     <Form />
     </>
   )

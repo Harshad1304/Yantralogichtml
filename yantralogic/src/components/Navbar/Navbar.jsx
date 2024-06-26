@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { FiAlignJustify } from "react-icons/fi";
 import { RiCloseLargeLine } from "react-icons/ri";
+import navMenuLinks from './navcontent';
+
 function Navbar() {
 
     const [isMenuOpen, setMenuOpen] = useState(true);
@@ -19,15 +21,21 @@ function Navbar() {
 
                 <div className='hidden xl:flex'>
                 <ul className=' text-white flex gap-16 tracking-wide  items-center mt-4 uppercase '>
-                        <li className=' cursor-pointer ' >Home</li>
-                        <li className=' cursor-pointer ' >Services</li>
+                       
+                       {
+                        navMenuLinks.map((item,index)=> (<a key={index} href={item.href} className={item.lable === 'Contact Us'?'text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-3 mt-3 px-7 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800':''}>{item.lable}</a>))
+                       }
+
+                        {/* <li className=' cursor-pointer '>Home</li>
+                        
                         <li className=' cursor-pointer ' >About</li>
                         <li className=' cursor-pointer ' >Industries</li>
-                        <a className='  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-3 px-7 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800' href="#">Contact Us</a>
+                        <a className='  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-3 px-7 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800' href="#">Contact Us</a> */}
                     </ul>                      
                 </div>
 
-                {/* Menu Button */}
+
+                {/* Mobile Nav  Menu Button */}
             <div onClick={handleMenuClick} className='xl:hidden  z-10 cursor-pointer'>
                 {isMenuOpen?<RiCloseLargeLine className='text-3xl' />:<FiAlignJustify className='text-white text-3xl'/>}
                 
@@ -62,3 +70,13 @@ function Navbar() {
 }
 
 export default Navbar
+
+
+
+{/* <div className=' group relative'>
+                            <li className=' cursor-pointer ' >Services</li>
+                            <span className='bg-zinc-200 h-1 absolute right-0 left-0 rounded-lg origin-left scale-x-0 group-hover:scale-x-100 group-hover:transition-transform group-hover:duration-300'></span>
+                            <div className=' absolute  h-6 left-0 right-0 '></div>
+                            <div className='  hidden group-hover:block absolute top-10 -translate-x-1/2 left-1/2 bg-white w-64 h-80'> <div className='text-black justify-center flex'><h1>Hello dropdown</h1></div>
+                            </div>
+                        </div> */}
