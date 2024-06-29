@@ -78,15 +78,18 @@ const navMenuLinks = [
     },
     {
         lable: "Carrers",
-        href: "#"   
+        href: "#" ,
+        submenu: false
     },
     {
         lable: "About Us",
-        href: "#"
+        href: "#",
+        submenu: false
     },
     {
         lable: "Contact Us",
-        href: '#'
+        href: '#',
+        submenu: false
     }
 ]
 

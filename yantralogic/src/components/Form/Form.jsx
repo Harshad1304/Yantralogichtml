@@ -6,8 +6,8 @@ function Form() {
             <div className=" grid md:grid-cols-2  gap-8 md:gap-16 px-8">
                 <div className="text-white">
                     <h1 className="hidden md:block md:mt-20 md:leading-[60px] md:text-5xl mb-2 md:mb-6 text-xl ">Our Subject Matter <br /> Experts Are Change <br /> Catalysts</h1>
-                    <h1 className=" md:hidden md:mt-20 md:leading-[60px] md:text-5xl mb-2 md:mb-6 text-xl ">Our Subject Matter Experts Are Change Catalysts</h1>
-                    <p className=" text-xl md:text-xl">Book Your First Presentation with Our Experts Today.</p>
+                    <h1 className=" md:hidden md:mt-20 md:leading-[60px] md:text-5xl mb-2 md:mb-6 text-xl ">Our Subject Matter <br />Experts Are Change Catalysts</h1>
+                    <p className=" text-sm md:text-xl">Book Your First Presentation with Our Experts Today.</p>
                 </div>
 
                 {/* Form Container goes here */}

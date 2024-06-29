@@ -4,13 +4,15 @@ import Services from "./components/Services/Services"
 import Solutions from "./components/Solutions/Solutions"
 import Numbers from "./components/Numbers/Numbers"
 import Form from "./components/Form/Form"
+import Navone from "./components/Navbar/Navone"
 
 function App() {
  
 
   return (
     <>
-     <Navbar />
+    <Navone />
+     {/* <Navbar /> */}
      <Hero />
      <Services />
      <Numbers />
