@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* slick-carousel custom styles */
+.slick-slider {
+    perspective: 1000px;
+  }
+  
+  .slick-list {
+    overflow: visible;
+    
+  }
+  
+  .slick-slide {
+    
+    transform: scale(0.85) skewY(20deg) ;
+    transition: transform 0.3s;
+    opacity: 0.5;
+  }
+
+  .slick-slide .content{
+    display: none;
+    
+  }
+
+  .slick-center .content{
+    display: block;
+    
+  }
+
+
+  .slick-slide .card-bg{
+    background-color: transparent;
+  }
+  .slick-center .card-bg{
+    background-color: white;
+  }
+
+  .slick-center {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+
+  /* Add some padding for better appearance on small screens */
+  @media (max-width: 768px) {
+    .slick-slide {
+      padding: 10px;
+    }
+  }

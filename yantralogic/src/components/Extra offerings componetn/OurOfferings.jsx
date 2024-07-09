@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Solutions = () => {
+const OurOfferings = () => {
   const tabs = [
     { title: 'Software Development', content: 'A software development company with 35 years of business excellence...' },
     { title: 'Testing & QA', content: 'Testing & QA content goes here...' },
@@ -39,4 +39,4 @@ const Solutions = () => {
   );
 };
 
-export default Solutions;
+export default OurOfferings ;

@@ -11,12 +11,12 @@ function Numbers() {
         <div className='font-extralight  leading-snug   text-black tracking '>With our agility & engineering expertise, we equip your critical business functions with customised tech, and expand digital capabilities.</div>
     </div>
     <div  className='flex flex-col gap-1 px-2'>
-        <hdiv className='text-blue-700 text-4xl font-bold'>1500<span>+</span></hdiv>
+        <div className='text-blue-700 text-4xl font-bold'>1500<span>+</span></div>
         <div className=' font-bold'>Tech Evangelists</div>
         <div className=' font-light  leading-snug   text-black tracking '>We are a dynamic team of technology enthusiasts and experts passionately driven to achieve the best results for our clients.</div>
     </div>
     <div className='flex flex-col gap-1 px-2'>
-        <hdiv className='text-blue-700 text-4xl font-bold'>3000<span>+</span></hdiv>
+        <div className='text-blue-700 text-4xl font-bold'>3000<span>+</span></div>
         <div className=' font-bold'>Solutions Designed and Delivered</div>
         <div className=' font-light  leading-snug   text-black tracking '>We have empowered businesses with thousands of successful futuristic solutions that have helped them grow and scale.</div>
     </div>
@@ -26,7 +26,7 @@ function Numbers() {
         <div className=' font-light  leading-snug   text-black tracking '>We are a dynamic team of technology enthusiasts and experts passionately driven to achieve the best results for our clients.</div>
     </div>
     <div  className='flex flex-col gap-1 px-2'>
-        <hdiv className='text-blue-700 text-4xl font-bold'>05<span>+</span></hdiv>
+        <div className='text-blue-700 text-4xl font-bold'>05<span>+</span></div>
         <div className=' font-bold'>Strategic Federal Partnerships</div>
         <div className=' font-light  leading-snug   text-black tracking '>We drive collaborative initiatives that address critical challenges and deliver impactful solutions.</div>
     </div>

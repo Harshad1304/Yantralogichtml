@@ -5,6 +5,11 @@ import Solutions from "./components/Solutions/Solutions"
 import Numbers from "./components/Numbers/Numbers"
 import Form from "./components/Form/Form"
 import Navone from "./components/Navbar/Navone"
+import Footer from "./components/Footer/Footer"
+import OurOfferings from "./components/Extra offerings componetn/OurOfferings"
+import SolutionsCards from "./components/Solutions/SolutionsCards"
+import AboutUs from "./components/AboutUs/AboutUs"
+import ContactUs from "./components/ContactUs/ContactUs"
 
 function App() {
  
@@ -14,10 +19,18 @@ function App() {
     <Navone />
      {/* <Navbar /> */}
      <Hero />
+     {/* <OurOfferings /> */}
      <Services />
      <Numbers />
-     <Solutions />
+     <div className=" overflow-x-hidden">
+     <SolutionsCards />
+     </div>
+    
+     {/* <Solutions /> */}
     <Form />
+    <Footer />
+    <AboutUs />
+    <ContactUs />
     </>
   )
 }
