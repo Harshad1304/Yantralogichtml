@@ -2,7 +2,7 @@ import React from 'react'
 
 function Form() {
   return (
-    <div className="bg-gradient-to-r from-purple-900 to-blue-900 min-h-screen flex p-7 items-center justify-center">
+    <div className="bg-gradient-to-r from-purple-900 to-blue-900 min-h-screen flex md:p-7 items-center justify-center">
             <div className=" grid md:grid-cols-2  gap-8 md:gap-16 px-8">
                 <div className="text-white">
                     <h1 className="hidden md:block md:mt-20 md:leading-[60px] md:text-5xl mb-2 md:mb-6 text-xl ">Our Subject Matter <br /> Experts Are Change <br /> Catalysts</h1>
@@ -11,7 +11,7 @@ function Form() {
                 </div>
 
                 {/* Form Container goes here */}
-                <div className="w-full bg-[#0e0e1c]/70 py-10 px-10 rounded-xl ">
+                <div className="w-full bg-[#0e0e1c]/70 py-10 px-5 md:px-10 rounded-xl ">
                     <div className="space-y-4">
                         <div className="border-b-[1px]  border-[#3f3f41] pb-2">
                             <input

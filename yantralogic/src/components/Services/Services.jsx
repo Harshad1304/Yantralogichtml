@@ -5,7 +5,7 @@ import contents from '../Card/content'
 function Services() {
   return (
 
-<div className=' w-full bg-black  p-24 '> 
+<div className=' w-full bg-black p-4 md:p-24 '> 
 
             {/* Headings goes here */}
         <div className=''>
@@ -14,9 +14,9 @@ function Services() {
                 Existing Ones with a Development Process That <br /> 
                 Beats Industry-Best Timelines
             </h1>
-            <h1 className=' md:hidden lg:text-5xl text-2xl font-light text-white'>
-            We Create New Solutions and Transform
-              Existing Ones with a Development Process That
+            <h1 className=' md:hidden text-2xl tracking-[0.3px] font-semibold text-white'>
+            We Create New  Solutions and Transform
+              Existing Ones with a Development Process  That
               Beats Industry-Best Timelines
             </h1>
           </div>
@@ -29,7 +29,7 @@ function Services() {
             </div>
 
            {/* Our Cards Goes Here */}
-           <div className="mt-7 lg:mt-20 grid gap-4 md:gap-4 grid-cols-4">
+           <div className="mt-7 lg:mt-20 grid gap-4 md:gap-4 md:grid-cols-4">
            {contents.map((elem,i)=>(
             <Card src={elem.imgSrc} key={i} title={elem.heading} />
            ))}

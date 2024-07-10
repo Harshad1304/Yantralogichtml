@@ -1,6 +1,3 @@
-
-
-
 const navMenuLinks = [
     {
         lable: "Home",
@@ -11,74 +8,31 @@ const navMenuLinks = [
         lable: "Services",
         href:'#',
         submenu:[
-            {
-                lable: "Application Services",
-                href: "#"
-            },
-            {
-                lable: "Software Development",
-                href: "#"
-            },
-            {
-                lable: "Web Development",
-                href: "#"
-            },
-            {
-                lable: "Mobile Application",
-                href: "#"
-            },
-            {
-                lable: "UI/UX Design",
-                href: "#"
-            },
-            {
-                lable: "Data Science",
-                href: "#"
-            },
-            {
-                lable: "IOT",
-                href: "#"
-            },
+            { lable: "Application Services", href: "#" },
+            { lable: "Software Development", href: "#" },
+            { lable: "Web Development", href: "#" },
+            { lable: "Mobile Application", href: "#" },
+            { lable: "UI/UX Design", href: "#" },
+            { lable: "Data Science", href: "#" },
+            { lable: "IOT", href: "#" },
         ]
     },
-
     {
         lable: "Solutions",
         href:'#',
         submenu:[
-            {
-                lable: "CRM",
-                href: "#"
-            },
-            {
-                lable: "ERP",
-                href: "#"
-            },
-            {
-                lable: "Automation",
-                href: "#"
-            },
-            {
-                lable: "E-Commerce",
-                href: "#"
-            },
-            {
-                lable: "Data Analytics",
-                href: "#"
-            },
-            {
-                lable: "Learning Management System",
-                href: "#"
-            },
-            {
-                lable: "IOT Dashboard",
-                href: "#"
-            },
+            { lable: "CRM", href: "#" },
+            { lable: "ERP", href: "#" },
+            { lable: "Automation", href: "#" },
+            { lable: "E-Commerce", href: "#" },
+            { lable: "Data Analytics", href: "#" },
+            { lable: "Learning Management System", href: "#" },
+            { lable: "IOT Dashboard", href: "#" },
         ]
     },
     {
         lable: "Carrers",
-        href: "#" ,
+        href: "#",
         submenu: false
     },
     {
@@ -91,7 +45,6 @@ const navMenuLinks = [
         href: '#',
         submenu: false
     }
-]
+];
 
-
-export default navMenuLinks ;
+export default navMenuLinks;

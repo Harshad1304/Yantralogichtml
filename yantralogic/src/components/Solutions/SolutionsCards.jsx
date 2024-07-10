@@ -42,16 +42,16 @@ function SolutionsCards() {
       <div className=" w-4/5">
         <Slider  ref={sliderRef} {...settings}>
           {data.map((d, index) => (
-            <div key={index} className=" px-2" onClick={() => handleCardClick(index)}>
+            <div key={index} className="md: px-2" onClick={() => handleCardClick(index)}>
               <div className="card-bg bg-white text-black rounded-xl shadow-lg overflow-hidden transform transition-transform">
                 <div className="flex h-56 rounded-t-lg overflow-hidden">
                   <img src={d.img} alt={d.title} className="object-cover w-full" />
                 </div>
                 <div className="gap-3 p-4">
-                  <p className="font-semibold text-center mb-6 text-xl">{d.title}</p>
+                  <p className="font-semibold md:text-center mb-2 md:mb-6 text-xl">{d.title}</p>
                   <div className='content'>
-                    <p className="text-left text-lg">{d.content}</p>
-                    <button className="mt-10 py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 transition-colors">Read More</button>
+                    <p className="text-left md:text-lg">{d.content}</p>
+                    <button className="mt-4 md:mt-10 py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 transition-colors">Read More</button>
                   </div>
                 </div>
               </div>

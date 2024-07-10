@@ -10,7 +10,7 @@ function Hero() {
     <div className=' absolute h-full w-full top-0 left-0 bg-slate-800/50'></div>
 
       <div className=' pt-[250px]  pl-[6vw] absolute top-0'>
-        <h2 className='font-semibold tracking-tighter text-6xl mb-7'>Meet the Digital Drivers of Global Disruptors</h2>
+        <h2 className='font-semibold tracking-tighter text-3xl xl:text-6xl mb-3 md:mb-7'>Meet the Digital Drivers of Global Disruptors</h2>
         <p className='mb-10 text-3xl  font-extralight '>
           We catalyze business growth by reimagining digital experiences that <br />
           conquer complex challenges through innovation and agility.

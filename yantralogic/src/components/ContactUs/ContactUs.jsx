@@ -11,8 +11,8 @@ function ContactUs() {
 
       </div>
       <div className="grid md:grid-cols-12 gap-8 mx-6 md:mx-36 py-24 md:py-48">
-        <div className="md:col-span-6 border rounded-lg p-10 bg-slate-900">
-          <div className='border p-5 rounded-lg shadow-xl bg-slate-300 text-black mb-10'>
+        <div className="md:col-span-6 border rounded-lg p-4 md:p-10 bg-slate-900">
+          <div className='border p-3 md:p-5 rounded-lg shadow-xl bg-slate-300 text-black mb-10'>
             <h3 className='text-2xl font-semibold mb-2'>Corporate Office:</h3>
             <p className='mb-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto corporis distinctio, magni laudantium consectetur placeat exercitationem ab impedit est, dolores voluptatibus facilis quasi adipisci dolore maxime quis. Quidem, omnis recusandae.</p>
           </div>
