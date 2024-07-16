@@ -10,6 +10,7 @@ import OurOfferings from "./components/Extra offerings componetn/OurOfferings"
 import SolutionsCards from "./components/Solutions/SolutionsCards"
 import AboutUs from "./components/AboutUs/AboutUs"
 import ContactUs from "./components/ContactUs/ContactUs"
+import OurServicesPages from "./components/OurServicesPages/OurServicesPages"
 
 function App() {
  
@@ -31,6 +32,7 @@ function App() {
     <Footer />
     <AboutUs />
     <ContactUs />
+    <OurServicesPages />
     </>
   )
 }

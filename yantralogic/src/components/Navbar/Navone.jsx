@@ -6,6 +6,18 @@ import { AnimatePresence, motion } from "framer-motion";
 
 
 function Navone() {
+
+    //Change nav color when scrolling
+    const [color, setColor] = useState(false);
+    const changeColor = ()=>{
+        if(window.scrollY >=180){
+            setColor(true);
+        }else{
+            setColor(false)
+        }
+    }
+    window.addEventListener('scroll',changeColor)
+
     const [isMenuOpen, setMenuOpen] = useState(false);
     const [isMobileServices, setMobileServices] = useState(false)
     const [isMobileSolutions, setMobileSolutions] = useState(false)
@@ -28,12 +40,13 @@ function Navone() {
 
 
     // NavBar For desktop
-    <div className='flex pt-6 p-5 md:px-9 justify-between items-center w-full h-12 absolute z-10'>
+   
+    <div className={` duration-500 flex pt-6 p-14 md:px-9 justify-between items-center w-full h-12  fixed z-[99] ${color?'bg-black/80':''}`}>
         <div className='flex justify-center items-center '>
         <img className='mr-16 h-auto w-96' src="/public/Logo/yantralgoiclogo.svg" alt="" />        
         </div>
     <div className='hidden xl:block'>
-        <div className=' text-white text-[25px] flex gap-8 tracking-wide  items-center mt-4 '>
+        <div className=' text-white text-[25px] flex gap-8 tracking-wide  items-center mt-8 '>
         <Flyoutcontent href={"#"}>Home</Flyoutcontent>
         <Flyoutcontent href={"#"} Dropdowncontent={Services }>Services</Flyoutcontent>
         <Flyoutcontent href={"#"} Dropdowncontent={Solutions } >Solutions</Flyoutcontent>
@@ -132,6 +145,7 @@ function Navone() {
     
 
     </div>
+   
   )
 }
 
