@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaFacebook, FaInstagram, FaTwitter, FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
@@ -80,12 +81,12 @@ function Footer() {
           </div>
         </div>
         <div className='mt-4 text-center text-sm'>
-          <a href="#" className='mx-2 hover:underline'>About Us</a> | 
+          <Link to="about-us" className='mx-2 hover:underline'>About Us</Link> | 
           <a href="#" className='mx-2 hover:underline'>Investors</a> | 
           <a href="#" className='mx-2 hover:underline'>Careers</a> | 
           <a href="#" className='mx-2 hover:underline'>News</a> | 
           <a href="#" className='mx-2 hover:underline'>Insights</a> | 
-          <a href="#" className='mx-2 hover:underline'>Contact Us</a>
+          <Link to="contact-us" className='mx-2 hover:underline'>Contact Us</Link>
         </div>
       </div>
     </div>

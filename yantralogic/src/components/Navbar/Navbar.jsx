@@ -44,19 +44,19 @@ function Navone() {
 
     // NavBar For desktop
    
-    <motion.div initial={{opacity:0,y:'-50%'}} animate={{opacity:1,y:'0'}} transition={{duration:.9,delay:-.2,}} className={`duration-500  flex pt-6 p-14 md:px-9 justify-between items-center w-full h-12  fixed z-[99] ${color?'bg-black/80 ':''}`}>
-        <div className='flex justify-center items-center '>
+    <motion.div initial={{opacity:0,y:'-50%'}} animate={{opacity:1,y:'0'}} transition={{duration:.9,delay:-.2,}} className={`duration-500 -ml-2 flex pt-6 p-14 md:px-9 justify-between items-center w-full h-12  fixed z-[99] ${color?'bg-black/80 ':''}`}>
+        <Link to='/' className='flex justify-center items-center '>
         <img className='mr-16 h-auto w-96' src="/public/Logo/yantralgoiclogo.svg" alt="" />        
-        </div>
+        </Link>
     <div className='hidden xl:block'>
         <div className=' text-white text-lg flex gap-8 tracking-wide  items-center mt-8 '>
-        <Flyoutcontent href={"#"}>Home</Flyoutcontent>
+        <Flyoutcontent href={"/"}>Home</Flyoutcontent>
         <Flyoutcontent href={"#"} Dropdowncontent={Services }>Services</Flyoutcontent>
         <Flyoutcontent href={"#"} Dropdowncontent={Solutions } >Solutions</Flyoutcontent>
-        <Flyoutcontent href={"#"}>Carrers</Flyoutcontent>
+        {/* <Flyoutcontent href={"#"}>Carrers</Flyoutcontent> */}
         <Flyoutcontent href={"about-us"} >About Us</Flyoutcontent>
         {/* contanct us button */}
-        <a className='  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg  text-xl px-7 py-2.5 me-2 mb-2 mt-2 ml-16 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800' href="#">Contact Us</a> 
+        <Link className='  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg  text-xl px-7 py-2.5 me-2 mb-2 mt-2 ml-16 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800' to="contact-us">Contact Us</Link> 
         </div>
     </div>
       {/* Mobile Nav  Menu Button */}
@@ -73,8 +73,8 @@ function Navone() {
                     
                     <div className='py-10 '>
                         <div>
-                        <a href='#' className='flex justify-between  border-b border-slate-400 text-3xl text-black font-thin mb-7 py-2'> Home 
-                        </a>
+                        <Link onClick={()=>setMenuOpen(!isMenuOpen)} to='/' className='flex justify-between  border-b border-slate-400 text-3xl text-black font-thin mb-7 py-2'> Home 
+                        </Link>
                         </div>
                         {/* Services dropdown */}
                         <div className='flex justify-between flex-col border-b border-slate-400 text-3xl text-black font-thin mb-7 py-2 '> 
@@ -131,16 +131,16 @@ function Navone() {
                         </div>    
 
 
-                        <div className='flex justify-between  border-b border-slate-400 text-3xl text-black font-thin mb-7 py-2'>
+                        {/* <div className='flex justify-between  border-b border-slate-400 text-3xl text-black font-thin mb-7 py-2'>
                             <a href='#' className='block'>Career</a>
-                            </div>
+                            </div> */}
                         <div className='flex justify-between  border-b border-slate-400 text-3xl text-black font-thin mb-7 py-2'>
-                            <a href='#' className='block'>About</a>
+                            <Link to='about-us' onClick={()=>setMenuOpen(!isMenuOpen)} className='block'>About</Link>
                             </div>
                         
                      </div>
                 <div className='felx mx-auto'>
-                <a className=' text-white text-3xl bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg  px-9 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800' href="contact-us">Contact Us</a>
+                <Link onClick={()=>setMenuOpen(!isMenuOpen)} className=' text-white text-3xl bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg  px-9 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800' to="contact-us">Contact Us</Link>
                 </div>   
 
                 </div>
@@ -164,13 +164,13 @@ const Flyoutcontent = ({children, href, Dropdowncontent})=>{
         onMouseEnter={()=>setOpen(true)}
         onMouseLeave={()=>setOpen(false)}
         className='relative h-fit w-fit'>
-            <a
+            <NavLink
             className='relative'
-            href={href}>{children}
+            to={href}>{children}
             <span 
             style={{transform:showDropdown?'scaleX(1)':'scaleX(0)'}}
             className='absolute h-1 bg-indigo-400 origin-left duration-300 ease-out mt-2 rounded-xl top-[30px] -right-2 -left-2'></span>
-            </a>
+            </NavLink>
             
             <AnimatePresence> 
             {
