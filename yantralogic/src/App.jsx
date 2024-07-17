@@ -1,19 +1,29 @@
 import Hero from "./components/Hero/Hero"
-import Navbar from "./components/Navbar/Navbar"
+
 import Services from "./components/Services/Services"
-import Solutions from "./components/Solutions/Solutions"
+
 import Numbers from "./components/Numbers/Numbers"
 import Form from "./components/Form/Form"
-import Navone from "./components/Navbar/Navone"
+import Navone from "./components/Navbar/Navbar"
 import Footer from "./components/Footer/Footer"
-import OurOfferings from "./components/Extra offerings componetn/OurOfferings"
+
 import SolutionsCards from "./components/Solutions/SolutionsCards"
 import AboutUs from "./components/AboutUs/AboutUs"
 import ContactUs from "./components/ContactUs/ContactUs"
 import OurServicesPages from "./components/OurServicesPages/OurServicesPages"
+import LocomotiveScroll from 'locomotive-scroll';
+
+
 
 function App() {
- 
+
+
+
+const locomotiveScroll = new LocomotiveScroll({
+  smooth: true,
+  smoothWheel: true,
+});
+
 
   return (
     <>
@@ -23,6 +33,7 @@ function App() {
      {/* <OurOfferings /> */}
      <Services />
      <Numbers />
+     
      <div className=" overflow-x-hidden">
      <SolutionsCards />
      </div>

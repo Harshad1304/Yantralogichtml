@@ -1,5 +1,5 @@
 import React from 'react';
-import Navone from '../Navbar/Navone';
+import Navone from '../Navbar/Navbar';
 
 function OurServicesPages() {
   return (
