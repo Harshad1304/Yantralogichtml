@@ -19,11 +19,6 @@
 
 
 
-// const locomotiveScroll = new LocomotiveScroll({
-//   smooth: true,
-//   smoothWheel: true,
-// });
-
 
 //   return (
 //     <>

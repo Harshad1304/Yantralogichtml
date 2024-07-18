@@ -44,7 +44,7 @@ function Navone() {
 
     // NavBar For desktop
    
-    <motion.div initial={{opacity:0,y:'-50%'}} animate={{opacity:1,y:'0'}} transition={{duration:.9,delay:-.2,}} className={`duration-500 -ml-2 flex pt-6 p-14 md:px-9 justify-between items-center w-full h-12  fixed z-[99] ${color?'bg-black/80 ':''}`}>
+    <motion.div initial={{opacity:0,y:'-50%'}} animate={{opacity:1,y:'0'}} transition={{duration:.9,delay:-.2,}} className={`duration-500  flex pt-6 p-14 md:px-9 justify-between items-center w-full h-12  fixed z-[99] ${color?'bg-black/80 ':''}`}>
         <Link to='/' className='flex justify-center items-center '>
         <img className='mr-16 h-auto w-96' src="/public/Logo/yantralgoiclogo.svg" alt="" />        
         </Link>
