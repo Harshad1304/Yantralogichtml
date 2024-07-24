@@ -21,7 +21,7 @@ function AboutUs() {
           className='text-[6.5vw] font-semibold relative z-10 text-gray-300/80'> About US</motion.h1>
       </div>
       {/* Below Banner Section */}
-      <div className='w-full bg-gray-600 pt-28 px-10 md:px-40'>
+      <div className='w-full bg-gray-100 pt-28 px-10 md:px-40'>
         <div className='grid grid-cols-1 gap-3 md:grid-cols-12 md:gap-6'>
           {/* left-side section */}
           <div className='md:col-span-6'>
@@ -43,7 +43,7 @@ function AboutUs() {
         <Numbers />
       </div>
       {/* Description */}
-      <div className=' p-5 md:p-16 w-full grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-10'>
+      <div className=' p-5 md:p-16 md:px-14 w-full grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-10'>
         {/* Leftside content */}
         <div className='md:col-span-6 col-span-12 relative'>
           <span className='absolute -left-7 top-4 bg-red-800 h-2 rotate-90 w-8'></span>
@@ -58,7 +58,7 @@ function AboutUs() {
           </div>
         </div>
         {/* Rightside content image */}
-        <div className='md:col-span-6 col-span-12 flex justify-center items-center'>
+        <div className='md:col-span-6 col-span-12 flex justify-end items-center'>
           <img className='w-full md:w-auto md:max-w-[35vw]' src="https://cdn.blackbox.com/cms/images/home/globe.png" alt="Globe" />
         </div>
       </div>
