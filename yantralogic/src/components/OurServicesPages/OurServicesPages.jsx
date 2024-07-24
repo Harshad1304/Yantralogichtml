@@ -4,7 +4,7 @@ import Navone from '../Navbar/Navbar';
 function OurServicesPages() {
   return (
     <>
-      {/* <Navone /> */}
+      
       <div className='relative w-full h-screen bg-gray-800 overflow-hidden'>
         {/* Banner Section  */}
         <div className='banner-section'> 
