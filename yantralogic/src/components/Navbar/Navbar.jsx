@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { FiAlignJustify } from "react-icons/fi";
 import { RiCloseLargeLine } from "react-icons/ri";
 import { AnimatePresence, motion } from "framer-motion";
+import yantralgoiclogo from '../../assets/Logo/yantralgoiclogo.svg'
+import mobile_logo from '../../assets/Logo/mobile_logo.png'
 
 import {Link, NavLink} from 'react-router-dom'
 
@@ -46,7 +48,8 @@ function Navone() {
    
     <motion.div initial={{opacity:0,y:'-50%'}} animate={{opacity:1,y:'0'}} transition={{duration:.9,delay:-.2,}} className={`duration-500  flex pt-6 p-14 md:px-9 justify-between items-center w-full h-12  fixed z-[99] ${color?'bg-black/80 ':''}`}>
         <Link to='/' className='flex justify-center items-center '>
-        <img className='mr-16 h-auto w-96' src="/public/Logo/yantralgoiclogo.svg" alt="" />        
+        {/* Desktop logo goes here */}
+        <img className='mr-16 h-auto w-80 mt-12' src={mobile_logo} alt="" />        
         </Link>
     <div className='hidden xl:block'>
         <div className=' text-white text-lg flex gap-8 tracking-wide  items-center mt-8 '>
@@ -67,8 +70,9 @@ function Navone() {
                    
                     {/* Mobile Nav */}
                 <div className={isMenuOpen?'xl:hidden absolute pt-6 px-5 flex flex-col top-0 left-0 bg-white w-full h-screen overflow-y-scroll transition-all duration-500' : 'xl:hidden absolute pt-6 px-12 flex flex-col top-0 -left-full bg-white w-full h-screen overflow-y-scroll transition-all duration-500' }>
+                     {/* Mobile logo goes here */}
                     <div className=' w-full'>
-                    <img className=' h-auto w-60' src="/public/Logo/mobile_logo.png" alt="" /> 
+                    <img className=' h-auto w-60' src={mobile_logo} alt="" /> 
                     </div>
                     
                     <div className='py-10 '>
@@ -186,13 +190,13 @@ const Flyoutcontent = ({children, href, Dropdowncontent})=>{
 }
 
 const ServicesMenu = [
-    { label: "Application Services", href: "#", content: "Comprehensive application management and support.",iconUrl: 'https://img.icons8.com/?size=100&id=GKFN2Gk1rPIh&format=png&color=000000'  },
-    { label: "Software Development", href: "#", content: "Custom software solutions tailored to your needs.",iconUrl:'https://img.icons8.com/?size=100&id=12486&format=png&color=000000' },
-    { label: "Web Development", href: "#", content: "Responsive and modern web design and development.", iconUrl:'https://img.icons8.com/?size=100&id=wLbzJQRzbYNN&format=png&color=000000' },
-    { label: "Mobile Application", href: "#", content: "Innovative mobile apps for iOS and Android.", iconUrl:'https://img.icons8.com/?size=100&id=12451&format=png&color=000000' },
-    { label: "UI/UX Design", href: "#", content: "User-centered design for optimal experience.", iconUrl:'https://img.icons8.com/?size=100&id=20612&format=png&color=000000' },
-    { label: "Data Science", href: "#", content: "Transform data into actionable insights.", iconUrl:'https://img.icons8.com/?size=100&id=Sc4kXyZfQ8TU&format=png&color=000000' },
-    { label: "IOT", href: "#", content: "Overview of IoT solutions and applications.",iconUrl:'https://img.icons8.com/?size=100&id=Qvrb6SLTR1NM&format=png&color=000000' },
+    { label: "Application Services", href: "/coming-soon", content: "Comprehensive application management and support.",iconUrl: 'https://img.icons8.com/?size=100&id=GKFN2Gk1rPIh&format=png&color=000000'  },
+    { label: "Software Development", href: "/coming-soon", content: "Custom software solutions tailored to your needs.",iconUrl:'https://img.icons8.com/?size=100&id=12486&format=png&color=000000' },
+    { label: "Web Development", href: "/coming-soon", content: "Responsive and modern web design and development.", iconUrl:'https://img.icons8.com/?size=100&id=wLbzJQRzbYNN&format=png&color=000000' },
+    { label: "Mobile Application", href: "/coming-soon", content: "Innovative mobile apps for iOS and Android.", iconUrl:'https://img.icons8.com/?size=100&id=12451&format=png&color=000000' },
+    { label: "UI/UX Design", href: "/coming-soon", content: "User-centered design for optimal experience.", iconUrl:'https://img.icons8.com/?size=100&id=20612&format=png&color=000000' },
+    { label: "Data Science", href: "/coming-soon", content: "Transform data into actionable insights.", iconUrl:'https://img.icons8.com/?size=100&id=Sc4kXyZfQ8TU&format=png&color=000000' },
+    { label: "IOT", href: "/coming-soon", content: "Overview of IoT solutions and applications.",iconUrl:'https://img.icons8.com/?size=100&id=Qvrb6SLTR1NM&format=png&color=000000' },
 ];
 
 
@@ -205,7 +209,7 @@ const Services = () => {
                         <img src={item.iconUrl} alt={`${item.label} icon`} className="w-8 h-8" />
                     </div>
                     <div className="w-3/4">
-                        <a href={item.href} className="font-semibold uppercase text-lg">{item.label}</a>
+                        <Link onClick={()=>setOpen(false)} to={item.href} className="font-semibold uppercase text-lg">{item.label}</Link>
                         <p className="font-thin text-[20px] ">{item.content}</p>
                     </div>
                 </div>
@@ -215,13 +219,13 @@ const Services = () => {
 };
 
 const SolutionsMenu = [
-    { label: "CRM", href: "#", content: "Customer Relationship Management solutions.", iconUrl: 'https://img.icons8.com/?size=100&id=13619&format=png&color=000000' },
-    { label: "ERP", href: "#", content: "Enterprise Resource Planning systems.", iconUrl: 'https://img.icons8.com/?size=100&id=21248&format=png&color=000000' },
-    { label: "Automation", href: "#", content: "Business process automation services.", iconUrl: 'https://img.icons8.com/?size=100&id=59630&format=png&color=000000' },
-    { label: "E-Commerce", href: "#", content: "Complete e-commerce solutions.", iconUrl: 'https://img.icons8.com/?size=100&id=12391&format=png&color=000000' },
-    { label: "Data Analytics", href: "#", content: "Data analysis and visualization services.", iconUrl: 'https://img.icons8.com/?size=100&id=59630&format=png&color=000000' },
+    { label: "CRM", href: "/coming-soon", content: "Customer Relationship Management solutions.", iconUrl: 'https://img.icons8.com/?size=100&id=13619&format=png&color=000000' },
+    { label: "ERP", href: "/coming-soon", content: "Enterprise Resource Planning systems.", iconUrl: 'https://img.icons8.com/?size=100&id=21248&format=png&color=000000' },
+    { label: "Automation", href: "/coming-soon", content: "Business process automation services.", iconUrl: 'https://img.icons8.com/?size=100&id=59630&format=png&color=000000' },
+    { label: "E-Commerce", href: "/coming-soon", content: "Complete e-commerce solutions.", iconUrl: 'https://img.icons8.com/?size=100&id=12391&format=png&color=000000' },
+    { label: "Data Analytics", href: "/coming-soon", content: "Data analysis and visualization services.", iconUrl: 'https://img.icons8.com/?size=100&id=59630&format=png&color=000000' },
     { label: "Learning Management System", href: "#", content: "Online learning and management platforms.", iconUrl: 'https://img.icons8.com/?size=100&id=12461&format=png&color=000000' },
-    { label: "IOT Dashboard", href: "#", content: "IoT data visualization and monitoring.", iconUrl: 'https://img.icons8.com/?size=100&id=30525&format=png&color=000000' },
+    { label: "IOT Dashboard", href: "/coming-soon", content: "IoT data visualization and monitoring.", iconUrl: 'https://img.icons8.com/?size=100&id=30525&format=png&color=000000' },
 ];
 
 const Solutions = ()=>{
@@ -233,7 +237,7 @@ return(
                 <img src={item.iconUrl} alt={`${item.label} icon`} className="w-8 h-8" />
             </div>
             <div className="w-3/4">
-                <a href={item.href} className="font-semibold uppercase text-lg">{item.label}</a>
+                <Link onClick={()=>setOpen(false)} to={item.href} className="font-semibold uppercase text-lg">{item.label}</Link>
                 <p className="font-thin text-[20px] ">{item.content}</p>
             </div>
         </div>

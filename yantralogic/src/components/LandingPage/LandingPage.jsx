@@ -3,6 +3,7 @@ import Hero from '../Hero/Hero'
 import Services from '../Services/Services'
 import SolutionsCards from '../Solutions/SolutionsCards'
 import Form from '../Form/Form'
+import Numbers from '../Numbers/Numbers'
 
 function LandingPage() {
   return (
@@ -14,9 +15,12 @@ function LandingPage() {
             <Services />
         </section>
         <section className='section-three'>
+            <Numbers />
+        </section>
+        <section className='section-four  overflow-x-hidden'>
             <SolutionsCards />
         </section>
-        <section className='section-four'>
+        <section className='section-five'>
             <Form />
         </section>
     </div>

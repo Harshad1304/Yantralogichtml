@@ -1,7 +1,7 @@
 import React from 'react';
 import Numbers from '../Numbers/Numbers';
 import AnimatedCards from './AnimatedCards';
-
+import { motion } from 'framer-motion';
 
 
 function AboutUs() {
@@ -9,13 +9,16 @@ function AboutUs() {
     
     <div className='w-full '>
      
-      {/* Banner */}
-      <div>
-        <img
-          className='object-cover h-[70vh] w-full'
-          src="https://images.pexels.com/photos/4170463/pexels-photo-4170463.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt="Banner"
-        />
+      
+      {/* Banner Image */}
+      <div className='w-full h-[90vh] bg-cover bg-bottom flex  justify-center items-center relative' style={{ backgroundImage: `url("https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr1=")` }}>
+      {/* overlay */}
+      <div className='bg-gray-900/40 w-full h-full absolute top-0 left-0'></div>
+          <motion.h1 
+          initial={{y:100,opacity:0}}
+          animate={{y:0,opacity:1}}
+          transition={{duration:1.5,ease:[0.45, 0, 0.55, 1]}}
+          className='text-[6.5vw] font-semibold relative z-10 text-gray-300/80'> About US</motion.h1>
       </div>
       {/* Below Banner Section */}
       <div className='w-full bg-gray-600 pt-28 px-10 md:px-40'>

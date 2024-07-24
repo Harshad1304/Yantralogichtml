@@ -12,6 +12,8 @@ import LandingPage from './components/LandingPage/LandingPage.jsx'
 import AboutUs from './components/AboutUs/AboutUs.jsx'
 import ContactUs from './components/ContactUs/ContactUs.jsx'
 import NotFoundPage from './components/NotFoundPage/NotFoundPage.jsx';
+import ComingSoon from './components/ComingSoon/ComingSoon.jsx';
+import Privacy from './components/PrivacyPolicy/Privacy.jsx';
 
 
 const router = createBrowserRouter( 
@@ -22,7 +24,9 @@ const router = createBrowserRouter(
       <Route path='/' element={<LandingPage />} />
       <Route path='about-us' element={<AboutUs />} />
       <Route path='contact-us' element={<ContactUs />} />
+      <Route path='privacy-policy' element={<Privacy />} />
       <Route path='*' element={<NotFoundPage />} />
+      <Route path='coming-soon' element={<ComingSoon />} />
     </Route>
     
     
@@ -33,6 +37,7 @@ const router = createBrowserRouter(
 const locomotiveScroll = new LocomotiveScroll({
   smooth: true,
   smoothWheel: true,
+  // lerp:0.09,
 });
 
  

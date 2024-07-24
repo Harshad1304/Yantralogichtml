@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaFacebook, FaInstagram, FaTwitter, FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import mobile_logo from '../../assets/Logo/mobile_logo.png'
 
 function Footer() {
   return (
@@ -10,7 +11,7 @@ function Footer() {
         {/* Left-side footer */}
         <div className='md:col-span-4'>
           {/* Logo */}
-          <img className='w-60 mb-4' src="/public/Logo/mobile_logo.png" alt="Logo" />
+          <img className='w-60 mb-4' src={mobile_logo} alt="Logo" />
           
         </div>
 

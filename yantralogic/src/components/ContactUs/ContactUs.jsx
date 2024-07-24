@@ -1,15 +1,21 @@
 import React from 'react';
-
+import {motion} from "framer-motion";
 
 function ContactUs() {
   return (
-    <div className="min-h-screen w-full bg-zinc-800 text-white">
+    <div className="min-h-screen w-full bg-gray-900 text-white">
       
-      {/* banner img */}
-      <div className='w-full h-full'>
-        <img className='w-full h-[80vh]' src="https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Contact Us Banner" />
-
+      {/* Banner Image */}
+      <div className='w-full h-[70vh] bg-cover bg-bottom flex  justify-center items-center relative' style={{ backgroundImage: `url("https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr1=")` }}>
+      {/* overlay */}
+      <div className='bg-gray-900/40 w-full h-full absolute top-0 left-0'></div>
+          <motion.h1 
+          initial={{y:100,opacity:0}}
+          animate={{y:0,opacity:1}}
+          transition={{duration:1.5,ease:[0.45, 0, 0.55, 1]}}
+          className='text-[6.5vw] font-semibold relative z-10 text-gray-300/80'> Contact US</motion.h1>
       </div>
+      
       <div className="grid md:grid-cols-12 gap-8 mx-6 md:mx-36 py-24 md:py-48">
         <div className="md:col-span-6 border rounded-lg p-4 md:p-10 bg-slate-900">
           <div className='border p-3 md:p-5 rounded-lg shadow-xl bg-slate-300 text-black mb-10'>
