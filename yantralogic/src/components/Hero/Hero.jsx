@@ -8,7 +8,7 @@ function Hero() {
     >
       <video 
         className='w-full h-full object-cover' 
-        src="https://videos.pexels.com/video-files/2675515/2675515-hd_1920_1080_30fps.mp4" 
+        src="https://videos.pexels.com/video-files/3130284/3130284-uhd_2560_1440_30fps.mp4" 
         autoPlay 
         loop 
         muted 

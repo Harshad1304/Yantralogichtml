@@ -49,7 +49,8 @@ function Navone() {
     <motion.div initial={{opacity:0,y:'-50%'}} animate={{opacity:1,y:'0'}} transition={{duration:.9,delay:-.2,}} className={`duration-500  flex p-10 md:px-9 justify-between items-center w-full h-12  fixed z-[99] ${color?'bg-black/80 ':''}`}>
         <Link to='/' className='flex justify-center items-center '>
         {/* Desktop logo goes here */}
-        <img className='w-60 ' src={mobile_logo} alt="" />        
+
+        <img className=' w-48 md:w-60 ' src={mobile_logo} alt="" />        
         </Link>
     <div className='hidden xl:block'>
         <div className=' text-white text-lg flex gap-8 tracking-wide  items-center '>
@@ -64,7 +65,7 @@ function Navone() {
     </div>
       {/* Mobile Nav  Menu Button */}
         <div onClick={handleMenuClick} className='xl:hidden  z-10 cursor-pointer'>
-                {isMenuOpen?<RiCloseLargeLine className='text-4xl' />:<FiAlignJustify className='text-white text-[40px]'/>}
+                {isMenuOpen?<RiCloseLargeLine className='text-4xl mb-1 -mr-3 ' />:<FiAlignJustify className='text-white mb-1 -mr-3 text-[40px]'/>}
                 
                 </div>
                    
@@ -83,7 +84,7 @@ function Navone() {
                         {/* Services dropdown */}
                         <div className='flex justify-between flex-col border-b border-slate-400 text-3xl text-black font-thin mb-7 py-2 '> 
                             <div onClick={handleMobileServices} className='flex justify-between mb-4'>
-                                <h3>Services</h3>
+                                <div className='text-none'>Services</div>
                                 <a href='#' className={`text-[50px] block rota ${isMobileServices?'rotate-45':' rotate-180'} transition-all duration-200`} >+</a></div> 
                             
                             <AnimatePresence>
@@ -91,7 +92,7 @@ function Navone() {
                                 isMobileServices && <motion.div initial={{opacity:0, y:-100}} animate={{opacity:1,y:0}} exit={{opacity:0,y:-100}} >
                                 {
                                     ServicesMenu.map((item, id)=>(
-                                        <div key={id} className='flex items-center mb-3'>
+                                        <div key={id} className=' hover:bg-gray-300 h-32 w-[90vw] p-2 rounded-lg shadow-xl flex items-center mb-3'>
                                             <div className='flex items-center justify-center mr-3'>
                                                 <img className='w-12' src={item.iconUrl} alt="" />
                                             </div>
@@ -110,7 +111,7 @@ function Navone() {
                         {/* Solutions Dropdown  */}
                         <div className='flex justify-between flex-col border-b border-slate-400 text-3xl text-black font-thin mb-7 py-2'> 
                             <div onClick={handleMobileSolutions} className='flex justify-between mb-4'>
-                                <h3>Solutions</h3>
+                                <div>Solutions</div>
                                 <a href='#' className={`text-[50px] block rota ${isMobileSolutions?'rotate-45':' rotate-180'} transition-all duration-200`} >+</a></div> 
                             
                             <AnimatePresence>     
@@ -118,7 +119,7 @@ function Navone() {
                                 isMobileSolutions && <motion.div initial={{opacity:0, y:-100}} animate={{opacity:1,y:0}} exit={{opacity:0,y:-100}}>
                                 {
                                     SolutionsMenu.map((item, id)=>(
-                                        <div key={id} className='flex items-center mb-3'>
+                                        <div key={id} className=' hover:bg-gray-300 p-2 h-32 w-[90vw] rounded-lg shadow-xl  flex items-center mb-3'>
                                             <div className='flex items-center justify-center mr-3'>
                                                 <img className='w-12' src={item.iconUrl} alt="" />
                                             </div>
@@ -169,7 +170,7 @@ const Flyoutcontent = ({children, href, Dropdowncontent})=>{
         onMouseLeave={()=>setOpen(false)}
         className='relative h-fit w-fit'>
             <NavLink
-            className='relative'
+            className='block relative'
             to={href}>{children}
             <span 
             style={{transform:showDropdown?'scaleX(1)':'scaleX(0)'}}
@@ -178,9 +179,9 @@ const Flyoutcontent = ({children, href, Dropdowncontent})=>{
             
             <AnimatePresence> 
             {
-                showDropdown && <motion.div initial={{opacity:0, y:15}} animate={{opacity:1,y:0}} exit={{opacity:0,y:15}} style={{translateX:"-50%"}} className='absolute top-[65px] left-1/2 -translate-x-1/2 text-black'>
-                     <div className=' absolute left-0 right-0 -top-6 h-6 '></div>
-                     <div className=' absolute left-1/2 -translate-y-1/2 -translate-x-1/2 top-3 z-[-1] h-10 w-10 bg-slate-400 rotate-45'></div>
+                showDropdown && <motion.div initial={{opacity:0, y:15}} animate={{opacity:1,y:0}} exit={{opacity:0,y:15}} style={{translateX:"-50%"}} className='pr-[15vw] absolute top-[65px] left-1/2 -translate-x-1/2 text-black'>
+                     <div className=' absolute left-0 right-0 -top-10 h-16'></div>
+                     <div className=' absolute left-1/2 -translate-y-1/2 -translate-x-1/2 top-3 z-[-1] h-10 w-10 bg-slate-200  rotate-45'></div>
                     <Dropdowncontent />
                 </motion.div>
             }
@@ -202,17 +203,17 @@ const ServicesMenu = [
 
 const Services = () => {
     return (
-        <div className="flex flex-wrap  justify-between w-[50vw] p-10 bg-slate-400 rounded-lg">
+        <div className="flex flex-wrap  justify-between w-[50vw] p-10 bg-slate-200 rounded-lg">
             {ServicesMenu.map((item, id) => (
-                <div key={id} className="w-1/2 flex mb-4 items-center">
+                <Link onClick={()=>setOpen(false)} to={item.href} key={id} className="w-1/2 flex mb-3 items-center shadow-xl rounded-xl hover:bg-slate-400 ">
                     <div className="w-1/4 flex justify-center">
                         <img src={item.iconUrl} alt={`${item.label} icon`} className="w-8 h-8" />
                     </div>
                     <div className="w-3/4">
-                        <Link onClick={()=>setOpen(false)} to={item.href} className="font-semibold uppercase text-lg">{item.label}</Link>
+                        <div  className="font-semibold uppercase text-lg">{item.label}</div>
                         <p className="font-thin text-[20px] ">{item.content}</p>
                     </div>
-                </div>
+                </Link>
             ))}
         </div>
     );
@@ -230,17 +231,17 @@ const SolutionsMenu = [
 
 const Solutions = ()=>{
 return(
-    <div className="flex flex-wrap  justify-between w-[50vw] p-10 bg-slate-400 rounded-lg">
+    <div className="flex flex-wrap justify-between w-[50vw] p-10 bg-slate-200 rounded-lg">
     {SolutionsMenu.map((item, id) => (
-        <div key={id} className="w-1/2 flex mb-4 items-center">
+        <Link onClick={()=>setOpen(false)} to={item.href} key={id} className="w-1/2 shadow-lg rounded-xl hover:bg-slate-400 flex mb-3 items-center">
             <div className="w-1/4 flex justify-center">
                 <img src={item.iconUrl} alt={`${item.label} icon`} className="w-8 h-8" />
             </div>
             <div className="w-3/4">
-                <Link onClick={()=>setOpen(false)} to={item.href} className="font-semibold uppercase text-lg">{item.label}</Link>
+                <div className="font-semibold uppercase text-lg">{item.label}</div>
                 <p className="font-thin text-[20px] ">{item.content}</p>
             </div>
-        </div>
+        </Link>
     ))}
 </div>
 )

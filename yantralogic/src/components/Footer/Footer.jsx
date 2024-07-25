@@ -11,7 +11,7 @@ function Footer() {
         {/* Left-side footer */}
         <div className='md:col-span-4'>
           {/* Logo */}
-          <img className='w-80 mb-4' src={mobile_logo} alt="Logo" />
+          <img className=' w-56 md:w-80 mb-4' src={mobile_logo} alt="Logo" />
           
         </div>
 

@@ -6,7 +6,7 @@ import Coming_Soon from "../../assets/ComingSoon/Coming_Soon.png"
 
 const ComingSoon = () => {
   return (
-    <div className=" pt-96 md:pt-60 md:pl-40 w-full h-screen bg-gradient-to-l from-gray-900 via-sky-900 to-gray-900 text-white">
+    <div className=" pt-60 md:pt-60 md:pl-40 w-full h-screen bg-gradient-to-l from-gray-900 via-sky-900 to-gray-900 text-white">
       <div className="w-full flex md:flex-nowrap flex-wrap-reverse  gap-10 font-['MochiyPopOne-Regular'] ">
         <div className=" leftside p-10 flex flex-col gap-2 text-center">
             <motion.h1 
