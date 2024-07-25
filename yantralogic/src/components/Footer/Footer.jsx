@@ -70,7 +70,8 @@ function Footer() {
       <div className='container mx-auto mt-10 px-4'>
         <div className='flex justify-between items-center border-t border-gray-700 pt-4'>
           <div className='text-sm'>
-            © 2024 Yantralogic <a href="#" className='hover:underline'>Privacy Policy</a> | <a href="#" className='hover:underline'>Cookie Policy</a> | <a href="#" className='hover:underline'>Terms of Use</a>
+            © 2024 Yantralogic 
+            <a href="/privacy-policy" className='hover:underline'>Privacy Policy</a> | <a href="#" className='hover:underline'>Cookie Policy</a> | <a href="#" className='hover:underline'>Terms of Use</a>
           </div>
           <div className='flex space-x-4'>
             <a href="#" className='text-xl'><FaFacebook /></a>

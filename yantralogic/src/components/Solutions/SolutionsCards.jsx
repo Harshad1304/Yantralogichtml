@@ -14,8 +14,11 @@ function SolutionsCards() {
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: '0',
-    className: 'center',
+    className: 'center', // Optional: Adjust if needed
     arrows: false,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    cssEase: 'linear',
     responsive: [
       {
         breakpoint: 1024, // Tablet and above
@@ -27,7 +30,7 @@ function SolutionsCards() {
         breakpoint: 768, // Mobile
         settings: {
           slidesToShow: 1,
-          arrows: false,
+          arrows: true,
         }
       }
     ]
@@ -38,20 +41,20 @@ function SolutionsCards() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen w-full bg-no-repeat bg-cover bg-[url('/src/assets/solutionsbg.jpg')]">
-      <div className=" w-4/5">
-        <Slider  ref={sliderRef} {...settings}>
+    <div className="flex justify-center items-center h-[100vh] w-full bg-gradient-to-tr from-cyan-700 via-sky-900 to-neutral-900 overflow-hidden ">
+      <div className="w-full ">
+        <Slider ref={sliderRef} {...settings}>
           {data.map((d, index) => (
-            <div key={index} className="md: px-2" onClick={() => handleCardClick(index)}>
+            <div key={index} className="px-2" onClick={() => handleCardClick(index)}>
               <div className="card-bg bg-white text-black rounded-xl shadow-lg overflow-hidden transform transition-transform">
                 <div className="flex h-56 rounded-t-lg overflow-hidden">
                   <img src={d.img} alt={d.title} className="object-cover w-full" />
                 </div>
-                <div className="gap-3 p-4">
-                  <p className="font-semibold md:text-center mb-2 md:mb-6 text-xl">{d.title}</p>
+                <div className="p-4">
+                  <p className="font-semibold text-center mb-2 text-xl">{d.title}</p>
                   <div className='content'>
-                    <p className="text-left md:text-lg">{d.content}</p>
-                    <button className="mt-4 md:mt-10 py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 transition-colors">Read More</button>
+                    <p className="text-left text-lg">{d.content}</p>
+                    <button className="mt-4 py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 transition-colors">Read More</button>
                   </div>
                 </div>
               </div>
@@ -97,7 +100,4 @@ const data = [
     },
 ]
 
-export default SolutionsCards
-
-
-//   bg-no-repeat bg-cover bg-[url('/src/assets/solutionsbg.jpg')]
+export default SolutionsCards;

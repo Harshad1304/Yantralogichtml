@@ -17,7 +17,7 @@ function LandingPage() {
         <section className='section-three'>
             <Numbers />
         </section>
-        <section className='section-four  overflow-x-hidden'>
+        <section className='section-four'>
             <SolutionsCards />
         </section>
         <section className='section-five'>

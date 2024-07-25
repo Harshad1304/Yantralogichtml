@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import ReactDOM from 'react-dom/client'
 // import App from './App.jsx'
 import './index.css'
-import LocomotiveScroll from 'locomotive-scroll';
+
 
 import { createBrowserRouter,createRoutesFromElements,Route,RouterProvider } from 'react-router-dom'
 import RootLayout from './Layout/RootLayout.jsx'
+import LocomotiveScroll from 'locomotive-scroll';
+
 
 //Pages
 import LandingPage from './components/LandingPage/LandingPage.jsx'
@@ -16,6 +18,8 @@ import ComingSoon from './components/ComingSoon/ComingSoon.jsx';
 import Privacy from './components/PrivacyPolicy/Privacy.jsx';
 import OurServicesPages from './components/OurServicesPages/OurServicesPages.jsx';
 
+
+const locomotiveScroll = new LocomotiveScroll();
 
 const router = createBrowserRouter( 
   createRoutesFromElements(
@@ -36,11 +40,6 @@ const router = createBrowserRouter(
 )
 
 
-const locomotiveScroll = new LocomotiveScroll({
-  smooth: true,
-  smoothWheel: true,
-  // lerp:0.09,
-});
 
  
 ReactDOM.createRoot(document.getElementById('root')).render(

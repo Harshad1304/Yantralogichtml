@@ -3,50 +3,57 @@
 @tailwind utilities;
 
 
+
 /* slick-carousel custom styles */
 .slick-slider {
     perspective: 1000px;
-  }
-  
-  .slick-list {
+}
+
+.slick-list {
     overflow: visible;
-    
-  }
-  
-  .slick-slide {
-    
-    transform: scale(0.85) skewY(20deg) ;
-    transition: transform 0.3s;
-    opacity: 0.5;
-  }
+    padding: 0 20px; 
+}
 
-  .slick-slide .content{
+.slick-slide {
+    margin-top: 2rem;
+    transform: scale(0.80) skewY(11deg); 
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0.7;
+    padding: 0 10px; /* Adjust as needed */
+}
+
+.slick-slide .content {
     display: none;
-    
-  }
+}
 
-  .slick-center .content{
+.slick-center .content {
     display: block;
-    
-  }
+}
 
-
-  .slick-slide .card-bg{
+.slick-slide .card-bg {
     background-color: transparent;
-  }
-  .slick-center .card-bg{
-    background-color: white;
-  }
+}
 
-  .slick-center {
+.slick-center .card-bg {
+    background-color: white;
+}
+
+.slick-center {
     transform: scale(1);
     opacity: 1;
-  }
-  
+}
 
-  /* Add some padding for better appearance on small screens */
-  @media (max-width: 768px) {
+/* Add some padding for better appearance on small screens */
+@media (max-width: 768px) {
     .slick-slide {
-      padding: 10px;
+        padding: 0 5px; /* Reduce padding on small screens */
     }
-  }
+}
+
+
+ /* Locomotive-css */
+
+ html.lenis{height:auto}.lenis.lenis-smooth{scroll-behavior:auto}.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}.lenis.lenis-stopped{overflow:hidden}.lenis.lenis-scrolling iframe{pointer-events:none}
+
+
+

@@ -46,13 +46,13 @@ function Navone() {
 
     // NavBar For desktop
    
-    <motion.div initial={{opacity:0,y:'-50%'}} animate={{opacity:1,y:'0'}} transition={{duration:.9,delay:-.2,}} className={`duration-500  flex pt-6 p-14 md:px-9 justify-between items-center w-full h-12  fixed z-[99] ${color?'bg-black/80 ':''}`}>
+    <motion.div initial={{opacity:0,y:'-50%'}} animate={{opacity:1,y:'0'}} transition={{duration:.9,delay:-.2,}} className={`duration-500  flex p-10 md:px-9 justify-between items-center w-full h-12  fixed z-[99] ${color?'bg-black/80 ':''}`}>
         <Link to='/' className='flex justify-center items-center '>
         {/* Desktop logo goes here */}
-        <img className='mr-16 h-auto w-80 mt-12' src={mobile_logo} alt="" />        
+        <img className='w-60 ' src={mobile_logo} alt="" />        
         </Link>
     <div className='hidden xl:block'>
-        <div className=' text-white text-lg flex gap-8 tracking-wide  items-center mt-8 '>
+        <div className=' text-white text-lg flex gap-8 tracking-wide  items-center '>
         <Flyoutcontent href={"/"}>Home</Flyoutcontent>
         <Flyoutcontent href={"#"} Dropdowncontent={Services }>Services</Flyoutcontent>
         <Flyoutcontent href={"#"} Dropdowncontent={Solutions } >Solutions</Flyoutcontent>
@@ -63,7 +63,7 @@ function Navone() {
         </div>
     </div>
       {/* Mobile Nav  Menu Button */}
-        <div onClick={handleMenuClick} className='xl:hidden  z-10 cursor-pointer mt-5'>
+        <div onClick={handleMenuClick} className='xl:hidden  z-10 cursor-pointer'>
                 {isMenuOpen?<RiCloseLargeLine className='text-4xl' />:<FiAlignJustify className='text-white text-[40px]'/>}
                 
                 </div>
