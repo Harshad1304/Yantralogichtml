@@ -19,6 +19,7 @@ import Privacy from './components/PrivacyPolicy/Privacy.jsx';
 import OurServicesPages from './components/OurServicesPages/OurServicesPages.jsx';
 
 
+
 const locomotiveScroll = new LocomotiveScroll();
 
 const router = createBrowserRouter( 
