@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+
 import ReactDOM from 'react-dom/client'
 // import App from './App.jsx'
 import './index.css'
@@ -6,7 +6,7 @@ import './index.css'
 
 import { createBrowserRouter,createRoutesFromElements,Route,RouterProvider } from 'react-router-dom'
 import RootLayout from './Layout/RootLayout.jsx'
-import LocomotiveScroll from 'locomotive-scroll';
+
 
 
 //Pages
@@ -20,7 +20,7 @@ import OurServicesPages from './components/OurServicesPages/OurServicesPages.jsx
 
 
 
-const locomotiveScroll = new LocomotiveScroll();
+
 
 const router = createBrowserRouter( 
   createRoutesFromElements(
