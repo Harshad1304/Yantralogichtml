@@ -46,7 +46,7 @@ function Numbers() {
 <div className=' flex mx-auto lg:mx-0  max-w-96 flex-col pb-4 rounded-xl px-6 bg-newblue'>
     {/* <div className='block relative'><img src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/industry-cta-bg.svg" className=' absolute  right-0 top-8 h-20 w-20  opacity-40' alt="" /></div> */}
     <h2 className=' text-xl text-white font-bold py-5'> Ready to innovate and drive <br /> an impact?</h2>
-    <button className=' self-center lg:self-auto max-w-48 text-newblue bg-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-3 px-7 py-2.5 me-2 mb-2  focus:outline-none'> Partner with Us </button>
+    <button className=' self-center lg:self-auto max-w-48 text-newblue bg-white hover:text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-3 px-7 py-2.5 me-2 mb-2  focus:outline-none'> Partner with Us </button>
 </div>
     </div>           
 
