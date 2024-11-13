@@ -84,10 +84,51 @@ function ServicesPage() {
                 }
               </div>
       </section>
-
+      {/* Section Five Approch */}
+            <section className='pt-[100px] md:pt-[100px] flex justify-center w-full pb-[100px] bg-slate-900 px-4'>
+               <div className='w-2/3 text-white flex flex-col'>
+                <h2 className='text-5xl font-bold'> Our Approach</h2>
+                <p className='text-3xl font-light pt-5'>We combine a unuique tech-savvy culture, product-oriented approach, and strong focus on achiveing business goals.</p>
+                <div className='s grid grid-cols-3'>
+                { 
+                  ourApproach.map((elem, index)=>(
+                    <div className='flex flex-col gap-4 pt-20'>
+                      <div><img src={elem.icon} alt="" /></div>
+                      <h3 className='text-4xl'>{elem.title}</h3>
+                      <p className='text-xl w-3/2'>{elem.description}</p>
+                    </div>
+                  ))
+                }
+                 <Link
+            to='/contact-us'
+            className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg px-5 md:px-7 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-full md:w-1/2 mt-12'
+          >
+           Get your quote now
+          </Link>
+                </div>
+              </div>
+            </section>
     </div>
   );
 }
+
+const ourApproach  = [
+  { 
+    icon:"https://weqtechnologies.com/wp-content/uploads/2024/09/competence.svg",
+    title:"Domain Proficiency",
+    description:"We leverage deep industry expertise to deliver tailored solutions that meet specific market needs."
+  },
+  { 
+    icon:"https://weqtechnologies.com/wp-content/uploads/2024/09/potency-1.svg",
+    title:"We are the Team",
+    description:"Our collaborative team of experts works seamlessly to drive project success and innovation."
+  },
+  { 
+    icon:"https://weqtechnologies.com/wp-content/uploads/2024/09/presentation-2.svg",
+    title:"Data-Driven Decisions",
+    description:"We utilize analytics and insights to inform strategies, ensuring optimal outcomes and informed decision-making."
+  }
+]
 
 const sectionTwoCards = [
   {

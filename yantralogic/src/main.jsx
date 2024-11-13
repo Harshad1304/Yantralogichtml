@@ -33,7 +33,7 @@ const router = createBrowserRouter(
       <Route path='privacy-policy' element={<Privacy />} />
       <Route path='*' element={<NotFoundPage />} />
       <Route path='coming-soon' element={<ComingSoon />} />
-      <Route path='ser' element={<ServicesPage />} />
+      <Route path='services' element={<ServicesPage />} />
     </Route>
     
     
