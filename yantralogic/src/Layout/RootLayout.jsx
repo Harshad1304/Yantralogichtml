@@ -27,7 +27,7 @@ function RootLayout() {
       <header>
         <Navbar />
       </header>
-      <main>
+      <main> 
         <Outlet />
       </main>
       <footer>
