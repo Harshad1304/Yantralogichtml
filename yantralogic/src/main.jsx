@@ -16,7 +16,7 @@ import ContactUs from './components/ContactUs/ContactUs.jsx'
 import NotFoundPage from './components/NotFoundPage/NotFoundPage.jsx';
 import ComingSoon from './components/ComingSoon/ComingSoon.jsx';
 import Privacy from './components/PrivacyPolicy/Privacy.jsx';
-import OurServicesPages from './components/OurServicesPages/OurServicesPages.jsx';
+import ServicesPage from './components/ServicesPage/ServicesPage.jsx';
 
 
 
@@ -33,7 +33,7 @@ const router = createBrowserRouter(
       <Route path='privacy-policy' element={<Privacy />} />
       <Route path='*' element={<NotFoundPage />} />
       <Route path='coming-soon' element={<ComingSoon />} />
-      <Route path='ser' element={<OurServicesPages />} />
+      <Route path='ser' element={<ServicesPage />} />
     </Route>
     
     
